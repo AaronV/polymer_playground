@@ -1,0 +1,23 @@
+<dom-module id="days-since-list">
+
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+
+  <template>
+    <template is="dom-repeat" items="{{sinces}}">
+      <days-since data="{{item}}"></days-since>
+    </template>
+  </template>
+
+  <script>
+    (function() {
+      Polymer({
+        is: 'days-since-list'
+      });
+    })();
+  </script>
+
+</dom-module>

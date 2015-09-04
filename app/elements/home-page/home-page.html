@@ -1,0 +1,34 @@
+<dom-module id="home-page">
+
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+
+  <template>
+    <paper-fab icon="add" on-click="addSince"></paper-fab>
+    <days-since-list sinces="{{sinces}}"></days-since-list>
+  </template>
+
+  <script>
+    (function() {
+      Polymer({
+        is: 'home-page',
+
+        ready: function() {
+          this.sinces = [
+            {
+              title: "The build has been green for"
+            }
+          ];
+        },
+
+        addSince: function() {
+          this.push("sinces", Object)
+        }
+      });
+    })();
+  </script>
+
+</dom-module>

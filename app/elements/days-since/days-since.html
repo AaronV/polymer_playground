@@ -1,0 +1,45 @@
+<dom-module id="days-since">
+
+  <style>
+    :host {
+      display: block;
+      margin: 20px;
+    }
+
+    paper-material {
+      padding: 20px;
+      height: 120px;
+      font-size: 30px;
+    }
+
+    paper-input {
+      display: inline-block;
+      width: 70%;
+    }
+  </style>
+
+  <template>
+    <paper-material elevation="1">
+      <div>
+        <paper-input placeholder="Title..." value="{{data.title}}"></paper-input>
+        <span>{{counter}}</span> seconds
+      </div>
+    </paper-material>
+  </template>
+
+  <script>
+    (function() {
+      Polymer({
+        is: 'days-since',
+
+        properties: {
+          counter: {
+            type: Number,
+            value: Date.now()
+          }
+        }
+      });
+    })();
+  </script>
+
+</dom-module>
